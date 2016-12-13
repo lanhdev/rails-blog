@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <h1>Lanh's Blog</h1>
+  <h1>Lanh Hoang's Blog</h1>
 <h3>My first Rails Application for CoderSchool!</h3>
-
+<br>
+<%= link_to 'New Article', new_article_path,
+    class: 'btn btn-primary btn-lg' %>
+<br>
+<br>
 <%= render @articles %>
 
-<br>
-
-<%= link_to 'New Article', new_article_path %>
 </div>
 
 
