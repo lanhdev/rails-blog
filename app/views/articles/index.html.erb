@@ -4,11 +4,20 @@
   <h1>Lanh Hoang's Blog</h1>
 <h3>My first Rails Application for CoderSchool!</h3>
 <br>
+<%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search title or body" %>
+  <%= submit_tag "Search" %>
+  <% end %>
+<br>
 <%= link_to 'New Article', new_article_path,
     class: 'btn btn-primary btn-lg' %>
 <br>
 <br>
-<%= render @articles %>
+<% if @articles.present? %>
+  <%= render @articles %>
+<% else %>
+  <p>There are no articles containing the term(s) <%= params[:search] %>.</p>
+<% end %>
 
 </div>
 
