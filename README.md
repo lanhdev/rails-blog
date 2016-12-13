@@ -4,9 +4,9 @@
 
 Submitted by: **Lanh Hoang**
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: **https://ancient-everglades-67777.herokuapp.com**
 
 ## User Stories
 
@@ -17,7 +17,7 @@ The following **required** functionality is complete:
 * [x] There is one post that introduces the App Creator with name, picture.
 * [x] User can delete stories, with an alert that asks the user to confirm.
 * [x] User see a search form on the Posts page.
-* [x] User can submit a search term to find all posts bywith titles containing the search term.
+* [x] User can submit a search term to find all posts by/with titles containing the search term.
 
 The following **optional** features are implemented:
 * [ ] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/. 
