@@ -29,10 +29,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'rails_12factor', group: 'production'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'redcarpet'
-gem 'rails_12factor', group: 'production'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
