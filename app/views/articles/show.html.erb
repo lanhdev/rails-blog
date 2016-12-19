@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+	<p>
+		<strong>Title:</strong>
+		<%= @article.title %>
+	</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
+	<p>
+		<strong>Body:</strong>
+		<%= @article.body %>
+	</p>
 
-<p>
-  <strong>Views:</strong>
-  <%= @article.impressionist_count %>
-</p>
+	<p>
+		<strong>Views:</strong>
+		<%= @article.impressionist_count %>
+	</p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+	<h2>Comments</h2>
+	<%= render @article.comments %>
+	<br>
+
+	<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
+
+	<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning btn-sm' %>
+	<%= link_to 'Back', articles_path, class: 'btn btn-info btn-sm' %>
+</div>
