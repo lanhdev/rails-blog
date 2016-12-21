@@ -4,7 +4,7 @@
 
 Submitted by: **Lanh Hoang**
 
-Time spent: **8** hours spent in total
+Time spent: **20** hours spent in total
 
 URL: **https://ancient-everglades-67777.herokuapp.com**
 
@@ -21,9 +21,9 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [x] There is a "navbar" that is responsive to window size similar to [this](http://v4-alpha.getbootstrap.com/examples/navbar/) 
-* [ ] User can see how many views a post has. 
-* [ ] User can leave a comment on a post.
-* [ ] User can add "tags" to a post, and filter posts by tag. 
+* [x] User can see how many views a post has. 
+* [x] User can leave a comment on a post.
+* [x] User can add "tags" to a post, and filter posts by tag. 
 
 The following **additional** features are implemented:
 
