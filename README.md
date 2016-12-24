@@ -4,7 +4,7 @@
 
 Submitted by: **Lanh Hoang**
 
-Time spent: **20** hours spent in total
+Time spent: **32** hours spent in total
 
 URL: **https://ancient-everglades-67777.herokuapp.com**
 
@@ -27,19 +27,22 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+* [x] Blog has welcome page.
+* [x] Add alert notification when Create/Update/Delete/Search article
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](/path/to/your/gif/file)
+![Video Walkthrough](walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- I have limitation knowledge of Ruby on Rails & HTML.
+- Bootstrap install `tether` locally for development purpose only but when I deploy the blog to Heroku I have to add the gem to Gemfile by myself.
+- Besides, I have trouble when I add new field to an existence table in database
 
 ## License
 

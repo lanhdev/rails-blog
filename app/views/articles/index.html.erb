@@ -5,7 +5,7 @@
 <div class="container">
   <div class="jumbotron">
    <h1>Lanh Hoang's Blog</h1>
-   <h3>My first Rails Application for CoderSchool!</h3>
+   <h3>My first Ruby on Rails Application for CoderSchool!</h3>
   </div>
   <nav class="navbar navbar-light bg-faded">
     <a class="navbar-brand" href="#">Blog</a>
@@ -39,6 +39,9 @@
   <% if @articles.present? %>
     <%= render @articles %>
   <% else %>
-    <p>There are no articles containing the term(s) <%= params[:search] %>.</p>
+    <p class="alert alert-warning alert-dismissable fade in">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+      <strong>Warning!</strong> There are no articles containing the term(s) <%= params[:search] %>.
+    </p>
   <% end %>
 </div>
