@@ -8,18 +8,23 @@
             <%= article.impressionist_count %>
           </span>
         </h4>
+        <h6 class="card-subtitle">
+          <strong>Tags:</strong>
+          <%= raw tag_links(article.all_tags) %>
+        </h6>
         <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
+      </div>
+      <div class="card-footer">
+        <p>
           <%= link_to 'Show', article_path(article), class: 'btn btn-success btn-sm'%>
           <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning btn-sm' %>
           <%= link_to 'Delete', article_path(article), class: 'btn btn-danger btn-sm',
           method: :delete,
           data: { confirm: 'Are you sure?' } %>
-      </div>
-      <div class="card-footer">
-        <p>
-          <strong>Tags:</strong>
-          <%= raw tag_links(article.all_tags) %>
-        </p> 
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated <%= article.updated_at %></small>
+        </p>
       </div>
     </div>
   </div>

@@ -29,6 +29,7 @@ The following **additional** features are implemented:
 
 * [x] Blog has welcome page.
 * [x] Add alert notification when Create/Update/Delete/Search article
+* [x] Add last updated time of article
 
 ## Video Walkthrough 
 
