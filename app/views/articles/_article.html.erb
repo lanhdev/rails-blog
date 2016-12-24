@@ -2,19 +2,20 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title"><%= article.title %></h4>
+        <h4 class="card-title">
+          <%= article.title %>
+          <span class="fa fa-eye float-xs-right" style="font-size:16px">
+            <%= article.impressionist_count %>
+          </span>
+        </h4>
         <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
-        <%= link_to 'Show', article_path(article), class: 'btn btn-success btn-sm'%>
-        <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning btn-sm' %>
-        <%= link_to 'Delete', article_path(article), class: 'btn btn-danger btn-sm',
-                     method: :delete,
-                     data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Show', article_path(article), class: 'btn btn-success btn-sm'%>
+          <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning btn-sm' %>
+          <%= link_to 'Delete', article_path(article), class: 'btn btn-danger btn-sm',
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
       </div>
       <div class="card-footer">
-        <p>
-          <strong>Views:</strong>
-          <%= article.impressionist_count %>
-        </p>
         <p>
           <strong>Tags:</strong>
           <%= raw tag_links(article.all_tags) %>

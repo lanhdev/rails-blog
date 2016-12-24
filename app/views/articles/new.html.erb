@@ -1,20 +1,30 @@
 <div class="container">
-	<h1>New Article</h1>
-	<p>
-		<%= form_for(Article.new, remote: true) do |f| %>
-		   <p>
-		   	<%= f.text_field :title, placeholder: "Title" %>
-		   </p>
-		   <p>
-		   	<%= f.text_area :body, placeholder: "Body" %>
-		   </p>
-		   <p>
-		   	<%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
-		   </p>
-		   <p>
-		   	<%= f.submit "Create", class: 'btn btn-primary' %>
-		   	<%= link_to 'Back', articles_path, class: 'btn btn-info' %>
-		   </p>
-		<% end %>
-	</p>
+  <div class="jumbotron">
+    <h1>New Article</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-block">
+          <p>
+		      <%= form_for(Article.new, remote: true) do |f| %>
+		      <p>
+		   	  <%= f.text_field :title, placeholder: "Title", class: 'form-control' %>
+		      </p>
+		      <p>
+		   	  <%= f.text_area :body, placeholder: "Body", class: 'form-control' %>
+		      </p>
+		      <p>
+		   	  <%= f.text_field :all_tags, placeholder: "Tags separated with comma", class: 'form-control' %>
+		      </p>
+		      <p>
+		   	  <%= f.submit "Create", class: 'btn btn-primary' %>
+		   	  <%= link_to 'Back', articles_path, class: 'btn btn-info' %>
+		      </p>
+		      <% end %>
+	       </p>    	
+        </div>
+      </div>	
+    </div>
+  </div>
 </div>

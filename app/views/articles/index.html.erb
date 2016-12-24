@@ -1,15 +1,13 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <h1>Lanh Hoang's Blog</h1>
-<h3>My first Rails Application for CoderSchool!</h3>
-<br>
-<%= form_tag(articles_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search title or body" %>
-  <%= submit_tag "Search" %>
-<% end %>
-<br>
-<nav class="navbar navbar-dark bg-inverse">
+  <div class="jumbotron">
+   <h1>Lanh Hoang's Blog</h1>
+   <h3>My first Rails Application for CoderSchool!</h3> 
+ </div>
+ <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Blog</a>
   <ul class="nav navbar-nav">
     <li class="nav-item active">
@@ -24,24 +22,27 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visit me on</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-        <a class="dropdown-item" href="#">LinkedIn</a>
-        <a class="dropdown-item" href="#">GitHub</a>
-        <a class="dropdown-item" href="#">Facebook</a>
+        <a class="dropdown-item fa fa-linkedin-square" style="font-size:24px" href="https://vn.linkedin.com/in/lanh-cong-hoang-217169a0"> LinkedIn</a>
+        <a class="dropdown-item fa fa-github-square" style="font-size:24px" href="https://github.com/lanhhoang"> GitHub</a>
+        <a class="dropdown-item fa fa-facebook-official" style="font-size:24px" href="https://www.facebook.com/lanh.hoang.5"> Facebook</a>
       </div>
     </li>
   </ul>
+  <form class="form-inline float-xs-right">
+    <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'align-middle' %>
+    <%= submit_tag "Search", class: 'btn btn-outline-success' %>
+    <% end %>
+  </form>
 </nav>
 <br>
 <%= link_to 'New Article', new_article_path,
-    class: 'btn btn-primary btn-lg' %>
+class: 'btn btn-primary btn-lg' %>
 <br>
 <br>
 <% if @articles.present? %>
-  <%= render @articles %>
+<%= render @articles %>
 <% else %>
-  <p>There are no articles containing the term(s) <%= params[:search] %>.</p>
+<p>There are no articles containing the term(s) <%= params[:search] %>.</p>
 <% end %>
-
 </div>
-
-
