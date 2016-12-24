@@ -8,16 +8,19 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     if params[:search]
       @articles = Article.search(params[:search]).order('created_at DESC')
-    else
-      @articles = Article.all.order('created_at DESC')
-    end
-    if params[:tag]
+    elsif params[:tag]
       @articles = Article.tagged_with(params[:tag]).order('created_at DESC')
     else
       @articles = Article.all.order('created_at DESC')
     end
+    # if params[:tag]
+    #   @articles = Article.tagged_with(params[:tag]).order('created_at DESC')
+    # else
+    #   @articles = Article.all.order('created_at DESC')
+    # end
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
+
   # GET /articles/new
   def new
     @article = Article.new
