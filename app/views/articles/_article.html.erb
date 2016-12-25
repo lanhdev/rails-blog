@@ -23,7 +23,7 @@
           data: { confirm: 'Are you sure?' } %>
         </p>
         <p class="card-text">
-          <small class="text-muted">Last updated <%= article.updated_at %></small>
+          <small class="text-muted">Last updated <%= article.updated_at.strftime("%e-%b-%Y %H:%M:%S %p") %></small>
         </p>
       </div>
     </div>
