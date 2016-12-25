@@ -8,6 +8,12 @@
           <h4 class="card-title"><%= @article.title %></h4>
           <p class="card-text"><%= @markdown.render(@article.body).html_safe %></p>
         </div>
+        <div class="card-footer">
+          <p>
+            <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning btn-sm' %>
+            <%= link_to 'Back', articles_path, class: 'btn btn-info btn-sm' %>
+            </p>
+        </div>
       </div>
     </div>
   </div>
@@ -17,12 +23,8 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
-        <div class="card-block">
-          <div class="card-title">
-            <h5 class="card-title">Comments</h5>
-            <%= render @article.comments %>
-          </div>
-        </div>
+        <div class="card-header"><h5>Comments</h5></div>
+        <div class="card-block"><%= render @article.comments %></div>
       </div>
     </div>
   </div>

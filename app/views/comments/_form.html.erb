@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
+        <h5 class="card-header">Add a comment:</h5>
         <div class="card-block">
-          <h5 class="card-title">Add a comment:</h5>
           <%= form_for([@article, @article.comments.build]) do |f| %>
             <p>
 	           <%= f.label :name %><br>
@@ -15,8 +15,6 @@
 	         </p>
 	         <p>
 	           <%= f.submit 'Create', class: 'btn btn-primary' %>
-	           <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning' %>
-	           <%= link_to 'Back', articles_path, class: 'btn btn-info' %>
 	         </p>
           <% end %>
         </div>
