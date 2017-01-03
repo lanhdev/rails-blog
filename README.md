@@ -6,7 +6,7 @@ Submitted by: **Lanh Hoang**
 
 Time spent: **32** hours spent in total
 
-URL: **https://ancient-everglades-67777.herokuapp.com**
+URL: **https://lanhhoang-blog.herokuapp.com/**
 
 ## User Stories
 
