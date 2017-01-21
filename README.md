@@ -41,9 +41,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-- I have limitation knowledge of Ruby on Rails & HTML.
+- Have limitation knowledge of Ruby on Rails & HTML.
 - Bootstrap install `tether` locally for development purpose only but when I deploy the blog to Heroku I have to add the gem to Gemfile by myself.
-- Besides, I have trouble when I add new field to an existence table in database
+- Have trouble when add new field to an existence table in database
+- Use [*Impressionist*](https://github.com/charlotte-ruby/impressionist) gem for view count
+- Add tag to article follow [this](https://www.sitepoint.com/tagging-scratch-rails/) tutorial 
 
 ## License
 

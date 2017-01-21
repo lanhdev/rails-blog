@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    #@articles = Article.all
     if params[:search]
       @articles = Article.search(params[:search]).order('created_at DESC')
     elsif params[:tag]
