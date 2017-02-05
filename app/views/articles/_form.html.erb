@@ -12,19 +12,20 @@
     <% end %>
     <div class="field">
       <p>
-        <%= f.label :title %><br>
+        <strong><%= f.label :title %></strong>
         <%= f.text_field :title, class: 'form-control' %>
       </p>
     </div>
     <div class="field">
       <p>
-        <%= f.label :body %><br>
+        <strong><%= f.label :body %></strong>
         <%= f.text_area :body, class: 'form-control' %>
       </p>
     </div>
     <div class="field">
       <p>
-      Tags<br><%= f.text_field :all_tags, class: 'form-control' %>
+        <strong>Tags</strong>
+        <%= f.text_field :all_tags, class: 'form-control' %>
       </p>
     </div>
     <div class="actions">
