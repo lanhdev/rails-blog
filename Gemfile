@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.6', '>= 2.6.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rails_12factor', group: 'production'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'redcarpet'
 
 source 'https://rails-assets.org' do
